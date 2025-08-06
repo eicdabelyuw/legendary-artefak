@@ -1,20 +1,14 @@
-// Tangkap semua elemen karakter
+// Ambil semua elemen karakter
 const characters = document.querySelectorAll('.character');
 
 characters.forEach(character => {
   character.addEventListener('click', () => {
     const name = character.dataset.name;
 
-    // Simpan karakter yang dipilih ke localStorage
+    // Simpan nama ke localStorage
     localStorage.setItem('selectedCharacter', name);
 
-    // Tambahkan efek visual (jika perlu)
-    characters.forEach(c => c.classList.remove('selected'));
-    character.classList.add('selected');
-
-    // Tunggu sebentar lalu pindah ke halaman map.html
-    setTimeout(() => {
-      window.location.href = 'map.html';
-    }, 500);
+    // Pindah ke map.html
+    window.location.href = 'map.html';
   });
 });
