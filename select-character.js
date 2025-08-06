@@ -1,13 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const characters = document.querySelectorAll(".character");
+// Tangkap semua elemen karakter
+const characters = document.querySelectorAll('.character');
 
-  characters.forEach((char) => {
-    char.addEventListener("click", () => {
-      characters.forEach((c) => c.classList.remove("selected"));
-      char.classList.add("selected");
+characters.forEach(character => {
+  character.addEventListener('click', () => {
+    const name = character.dataset.name;
 
-      const selectedName = char.getAttribute("data-name");
-      alert("Kamu memilih karakter: " + selectedName);
-    });
+    // Simpan karakter yang dipilih ke localStorage
+    localStorage.setItem('selectedCharacter', name);
+
+    // Tambahkan efek visual (jika perlu)
+    characters.forEach(c => c.classList.remove('selected'));
+    character.classList.add('selected');
+
+    // Tunggu sebentar lalu pindah ke halaman map.html
+    setTimeout(() => {
+      window.location.href = 'map.html';
+    }, 500);
   });
 });
