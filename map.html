@@ -12,6 +12,7 @@
   <script>
     // Ambil karakter dari localStorage
     const selectedCharacter = localStorage.getItem('selectedCharacter');
+    console.log("Karakter yang dibaca di map.html:", selectedCharacter); // debug
 
     if (selectedCharacter) {
       document.getElementById('character-info').innerText =
