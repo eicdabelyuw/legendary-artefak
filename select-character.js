@@ -5,7 +5,10 @@ characters.forEach(character => {
   character.addEventListener('click', () => {
     const name = character.dataset.name;
 
-    // Simpan nama ke localStorage
+    // DEBUG: Cek di console
+    console.log("Karakter dipilih:", name);
+
+    // Simpan ke localStorage
     localStorage.setItem('selectedCharacter', name);
 
     // Pindah ke map.html
