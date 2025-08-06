@@ -3,20 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Legenda Artefak</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Pilih Karakter - Legenda Artefak</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Selamat datang di Legenda Artefak</h1>
-  <p>Pilih karakter untuk memulai petualanganmu:</p>
-  <select id="characterSelect">
-    <option value="petualang">Petualang</option>
-    <option value="peneliti">Peneliti</option>
-    <option value="penjelajah">Penjelajah</option>
-    <option value="pemecah teka-teki">Pemecah Teka-Teki</option>
-  </select>
-  <button onclick="mulaiPetualangan()">Mulai</button>
-
-  <script src="js/select-character.js"></script>
+  <h1>Pilih Karakter Anda</h1>
+  <div class="character-selection">
+    <div class="character" data-name="Aksa">
+      <img src="https://via.placeholder.com/100x100?text=Aksa" alt="Aksa">
+      <p>Aksa (Cepat)</p>
+    </div>
+    <div class="character" data-name="Dewi">
+      <img src="https://via.placeholder.com/100x100?text=Dewi" alt="Dewi">
+      <p>Dewi (Ahli Puzzle)</p>
+    </div>
+    <div class="character" data-name="Raka">
+      <img src="https://via.placeholder.com/100x100?text=Raka" alt="Raka">
+      <p>Raka (Kuat)</p>
+    </div>
+    <div class="character" data-name="Tari">
+      <img src="https://via.placeholder.com/100x100?text=Tari" alt="Tari">
+      <p>Tari (Pandai Bernegosiasi)</p>
+    </div>
+  </div>
+  <script src="select-character.js"></script>
 </body>
 </html>
