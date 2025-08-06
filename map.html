@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Awal Petualangan - Legenda Artefak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Selamat Datang di Dunia Legenda Artefak</h1>
+  <p id="character-info"></p>
+
+  <script>
+    // Ambil karakter yang dipilih dari localStorage
+    const selectedCharacter = localStorage.getItem('selectedCharacter');
+
+    if (selectedCharacter) {
+      document.getElementById('character-info').innerText =
+        `Kamu bermain sebagai: ${selectedCharacter}`;
+    } else {
+      document.getElementById('character-info').innerText =
+        'Tidak ada karakter yang dipilih.';
+    }
+  </script>
+</body>
+</html>
